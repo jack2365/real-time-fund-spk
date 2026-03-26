@@ -1,0 +1,46 @@
+#!/bin/sh
+
+# DSM 7 standard variables
+PACKAGE_DIR="/var/packages/WealthSight/target"
+LOG_DIR="/var/packages/WealthSight/var/logs"
+LOG_FILE="${LOG_DIR}/server.log"
+PID_FILE="/var/packages/WealthSight/var/server.pid"
+
+start_daemon () {
+    mkdir -p "${LOG_DIR}"
+    cd "${PACKAGE_DIR}/app"
+    nohup python3 "${PACKAGE_DIR}/app/server.py" > "${LOG_FILE}" 2>&1 &
+    echo $! > "${PID_FILE}"
+}
+
+case $1 in
+    start)
+        echo "Starting WealthSight ..."
+        # Start the Python 3 server in the background
+        start_daemon
+        exit 0
+        ;;
+    stop)
+        echo "Stopping WealthSight ..."
+        if [ -f "${PID_FILE}" ]; then
+            PID=$(cat "${PID_FILE}")
+            if ps -p $PID > /dev/null; then
+                kill $PID
+            fi
+            rm -f "${PID_FILE}"
+        fi
+        exit 0
+        ;;
+    status)
+        if [ -f "${PID_FILE}" ]; then
+            PID=$(cat "${PID_FILE}")
+            if ps -p $PID > /dev/null; then
+                exit 0
+            fi
+        fi
+        exit 1
+        ;;
+    *)
+        exit 1
+        ;;
+esac

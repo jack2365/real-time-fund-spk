@@ -1,0 +1,5 @@
+#!/bin/sh
+PKG_DIR="/var/packages/${SYNOPKG_PKGNAME}/target"
+mkdir -p "${PKG_DIR}/logs"
+chown -R ${SYNOPKG_PKGNAME}:${SYNOPKG_PKGNAME} "${PKG_DIR}"
+exit 0

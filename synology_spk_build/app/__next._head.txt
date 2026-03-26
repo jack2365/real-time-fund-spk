@@ -1,0 +1,6 @@
+1:"$Sreact.fragment"
+2:I[73413,["/_next/static/chunks/f3f739d28ae769bf.js","/_next/static/chunks/0d37cd63f067f80c.js"],"ViewportBoundary"]
+3:I[73413,["/_next/static/chunks/f3f739d28ae769bf.js","/_next/static/chunks/0d37cd63f067f80c.js"],"MetadataBoundary"]
+4:"$Sreact.suspense"
+5:I[71985,["/_next/static/chunks/f3f739d28ae769bf.js","/_next/static/chunks/0d37cd63f067f80c.js"],"IconMark"]
+0:{"buildId":"UniMUK_W92HY_uKAOvuAl","rsc":["$","$1","h",{"children":[null,["$","$L2",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$L3",null,{"children":["$","$4",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"基智视界 V0.2.9"}],["$","meta","1",{"name":"description","content":"输入基金编号添加基金，实时显示估值与前10重仓"}],["$","link","2",{"rel":"icon","href":"/icon.svg?icon.c1d19566.svg","sizes":"any","type":"image/svg+xml"}],["$","$L5","3",{}]]}]}]}],null]}],"loading":null,"isPartial":false}
